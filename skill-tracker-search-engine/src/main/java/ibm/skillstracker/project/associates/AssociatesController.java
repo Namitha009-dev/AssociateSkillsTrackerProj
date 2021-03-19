@@ -23,7 +23,7 @@ public class AssociatesController {
 	AssociatesService service;
 	
 	
-	//to get all associates
+	//to get all the  associates
 	@RequestMapping("/associates/all")
 	List<Associates> getAllAssociates(){
 		return service.getAllAssociates();
