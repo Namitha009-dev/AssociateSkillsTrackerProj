@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validated Login Form</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<h1 class="label">Add HR details:</h1>
+		<form class="login_form" action="index.html" method="post" name="form" onsubmit="return validated()">
+			<div class="font">HR Name</div>
+			<input autocomplete="off" type="text" name="email">
+			<div id="email_error">Enter minimum 6 characters</div>
+			<div class="font">HR Username</div>
+			<input autocomplete="off" type="text" name="email1">
+			<div id="email_error1">Enter minimum 6 characters</div>
+			<div class="font font2">Password</div>
+			<input type="password" name="password">
+			<div id="pass_error">Enter minimum 6 characters</div>
+			<div class="font font2">confirm Password</div>
+			<input type="password" name="cpassword">
+			<div id="cpass_error">Password and confirm password are not same</div>
+			<button type="submit">submit</button>
+		</form>
+	</div>	
+	<script src="valid2.js"></script>
+</body>
+</html>
