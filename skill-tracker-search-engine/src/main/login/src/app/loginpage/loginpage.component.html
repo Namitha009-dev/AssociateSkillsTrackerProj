@@ -1,0 +1,99 @@
+<!------ Include the above in your HEAD tag ---------->
+<html>
+       
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<div class="container login-container">
+            <div class="row">
+                <div class="col-md-6 login-form-1">
+                    <h3>HR LOGIN</h3>
+                    <form>
+                        <div class="form-group">
+                          <input 
+                                    type="text"
+                                    id="userName" 
+                                    class="form-control" 
+                                    placeholder="Your User name"
+                                    required 
+                                    minlength="6"
+                                    pattern="[a-z]{6,15}"
+                                    ngModel name="userName"
+                                    #userName = "ngModel"
+                                    (change) = "display(userName)"
+                                    >
+                          <div class="alert alert-danger" *ngIf="userName.touched && !userName.valid">use (6-15) char of letters[a-z]</div>
+                          <!--<div *ngIf="userName.errors.minlength">Name should be atleast of 6 in length</div>-->
+                        </div>
+                        <div class="form-group">
+                            <input 
+                                    type="password"
+                                    id="password" 
+                                    class="form-control" 
+                                    placeholder="Your password"
+                                    required 
+                                    minlength="6"
+                                    pattern="[a-z]{6,15}"
+                                    ngModel name="password"
+                                    #password = "ngModel"
+                                    (change) = "display(password)"
+                                    >
+                          <div class="alert alert-danger" *ngIf="password.touched && !password.valid">use (6-15) char of letters[a-z]</div>
+                          <!--<div *ngIf="userName.errors.minlength">Name should be atleast of 6 in length</div>-->
+
+                            <!--<input type="password" class="form-control" placeholder="Your Password *" value="" />-->
+                        </div>
+                        <div class="form-group">
+                            <!--<input type="submit" class="btnSubmit" value="Login" />-->
+                            <button type="submit" class="btnSubmit"><a href="mainpage1" >Login</a></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6 login-form-2">
+                    <h3>ADMIN LOGIN</h3>
+                    <form>
+                        <div class="form-group">
+                            <!--<input type="text" class="form-control" placeholder="Your Email *" value="" />-->
+                            <input 
+                                    type="text"
+                                    id="userName1" 
+                                    class="form-control" 
+                                    placeholder="Your User name"
+                                    required 
+                                    minlength="6"
+                                    pattern="[a-z]{6,15}"
+                                    ngModel name="userName1"
+                                    #userName1 = "ngModel"
+                                    (change) = "display(userName1)"
+                                    >
+                          <div class="alert alert-danger" *ngIf="userName1.touched && !userName1.valid">use (6-15) char of letters[a-z]</div>
+                        </div>
+                        <div class="form-group">
+                           <!--<input type="password" class="form-control" placeholder="Your Password *" value="" />-->
+                           <input 
+                                    type="password"
+                                    id="password1" 
+                                    class="form-control" 
+                                    placeholder="Your password"
+                                    required 
+                                    minlength="6"
+                                    pattern="[a-z]{6,15}"
+                                    ngModel name="password1"
+                                    #password1 = "ngModel"
+                                    (change) = "display(password1)"
+                                    >
+                          <div class="alert alert-danger" *ngIf="password1.touched && password1.value != 'snehareddy'">Enter correct password</div>
+                        </div>
+                        <div class="form-group">
+                           <!-- <input type="submit" class="btnSubmit" value="Login" />-->
+                          <!--<button type="submit"><a routerLink = "./mainpage">Login</a></button>
+                         <button type="button" (click)="btnClick();">Login</button>-->
+                         <button type="submit" class="btnSubmit"><a href="addinghrdetails">Login</a></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    
+</html>
